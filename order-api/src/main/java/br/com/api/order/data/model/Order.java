@@ -19,27 +19,27 @@ public class Order implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private Long id;
-	
-	@Column(nullable = false, length = 100)
-	private Long user_id;
+		
+	@Column(name = "user_id")
+	private Long userId;
 
-	@Column(nullable = false, length = 11)
-	private String item_description;
+	@Column(name = "item_description")
+	private String itemDescription;
 	
-	@Column(nullable = true, length = 100)
-	private int item_quantity;
+	@Column(name = "item_quantity")
+	private int itemQuantity;
 	
-	@Column(nullable = true)
-	private BigDecimal item_price;
+	@Column(name = "item_price")
+	private BigDecimal itemPrice;
 	
-	@Column(nullable = true)
-	private BigDecimal total_value;
+	@Column(name = "total_value")
+	private BigDecimal totalValue;
 	
-	@Column(nullable = true)
-	private Date  created_at;
+	@Column(name = "created_at")
+	private Date  createdAt;
 
-	@Column(nullable = true)
-	private Date updated_at;	
+	@Column(name = "updated_at")
+	private Date updatedAt;	
 		
     public Long getId() {
 		return id;
@@ -50,59 +50,59 @@ public class Order implements Serializable{
 	}
 
 	public Long getUser_id() {
-		return user_id;
+		return userId;
 	}
 
 	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
+		this.userId = user_id;
 	}
 
 	public String getItem_description() {
-		return item_description;
+		return itemDescription;
 	}
 
 	public void setItem_description(String item_description) {
-		this.item_description = item_description;
+		this.itemDescription = item_description;
 	}
 
 	public int getItem_quantity() {
-		return item_quantity;
+		return itemQuantity;
 	}
 
 	public void setItem_quantity(int item_quantity) {
-		this.item_quantity = item_quantity;
+		this.itemQuantity = item_quantity;
 	}
 
 	public BigDecimal getItem_price() {
-		return item_price;
+		return itemPrice;
 	}
 
 	public void setItem_price(BigDecimal item_price) {
-		this.item_price = item_price;
+		this.itemPrice = item_price;
 	}
 
 	public BigDecimal getTotal_value() {
-		return total_value;
+		return totalValue;
 	}
 
 	public void setTotal_value(BigDecimal total_value) {
-		this.total_value = total_value;
+		this.totalValue = total_value;
 	}
 
 	public Date getCreated_at() {
-		return created_at;
+		return createdAt;
 	}
 
 	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
+		this.createdAt = created_at;
 	}
 
 	public Date getUpdated_at() {
-		return updated_at;
+		return updatedAt;
 	}
 
 	public void setUpdated_at(Date updated_at) {
-		this.updated_at = updated_at;
+		this.updatedAt = updated_at;
 	}	
 }
 

@@ -25,8 +25,9 @@ public class UserOrderControllher {
 
 			var request  = restTemplate.getForObject(
 	                   "http://user-api:8080/user/" + id, UserDTO.class);
-			
-			var userOrder = service.findById(id);
+
+					
+			var userOrder = service.findByUserId(id);
 						
 			if(request != null) userOrder.setUser_name(request.getName());
 			

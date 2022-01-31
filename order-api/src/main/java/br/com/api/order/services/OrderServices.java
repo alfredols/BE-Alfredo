@@ -27,6 +27,12 @@ public class OrderServices {
 		return result.isPresent() ? DozerConverter.parseObject(result.get(), OrderResponseDTO.class) : null;
 	}
 
+	public OrderResponseDTO findByUserId(Long user_id) {
+		
+		var result = repository.findByuserId(user_id);		
+		return result.isPresent() ? DozerConverter.parseObject(result.get(), OrderResponseDTO.class) : null;
+	}
+
 	public OrderResponseDTO create(OrderRequestDTO order) {
 
 		var entity = DozerConverter.parseObject(order, Order.class);		
@@ -38,6 +44,7 @@ public class OrderServices {
 	public OrderResponseDTO update(OrderRequestDTO order, long id) {	
 		var entity = DozerConverter.parseObject(order, Order.class);
 		entity.setId(id);
+		entity.setCreated_at(entity.getCreated_at());
 		entity.setUpdated_at(new Date());
 		return DozerConverter.parseObject(repository.save(entity), OrderResponseDTO.class);
 	}
