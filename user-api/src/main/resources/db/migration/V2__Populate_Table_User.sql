@@ -1,0 +1,15 @@
+-- INSERT INTO `serasa`.`user`
+-- (
+-- `name`,
+-- `email`,
+-- `password`,
+-- `dateCreation`
+-- )
+
+-- VALUES
+-- (
+-- 'alf',
+-- 'je@uol.com',
+-- 'chicago',
+--  null
+-- );
