@@ -76,7 +76,7 @@ services:
 
   user-api:    
     build:    
-      context: ./user
+      context: ./user-api
       dockerfile: Dockerfile
     depends_on:
       - db
@@ -93,7 +93,7 @@ services:
 
   order-api:    
     build:    
-      context: ./order
+      context: ./order-api
       dockerfile: Dockerfile
     depends_on:
       - db
