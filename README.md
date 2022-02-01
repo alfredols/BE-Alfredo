@@ -26,7 +26,9 @@ API REST com 5 endpoints:
 - POST /order
 - DELETE /{id}
 - PUT /{id}
-- GET /userorder/{id}
+- GET /userorder/{id} 
+
+O endpoint userorder/{id} obtém os pedidos por usuário e para localizar o nome do usúario é feita uma chamada a user-api.
 
 Dockerfile da aplicação:
 ```
@@ -44,6 +46,7 @@ version: '3.9'
 
 Para testar, execute a partir da raíz do projeto: 
 ```
+docker-compose build
 docker-compose up
 ```
 Teste chamando os endpoints pelo Postman ou pelo Swagger UI.
