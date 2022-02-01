@@ -6,7 +6,7 @@ Se trata de uma aplicação simples, somente com intenção de demonstrar os con
 ## Pré Requisitos
 
 - Ter o docker instalado em sua máquina
-- Uma IDE de sua preferência Eclipse ou VSCode)
+- Uma IDE de sua preferência Eclipse ou VSCode
 
 
 ### Aplicação User
